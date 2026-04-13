@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "install": "npm --prefix frontend install && npm --prefix backend install",
+    "postinstall": "npm run build",
     "build": "npm --prefix frontend run build",
+    "prestart": "npm run build",
     "start": "npm --prefix backend start",
     "dev": "npm --prefix backend run dev"
   }
